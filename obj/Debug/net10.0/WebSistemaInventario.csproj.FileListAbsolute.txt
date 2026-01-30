@@ -68,3 +68,4 @@ C:\respaldos Laurita\UNIANDES\TAREAS\APLICACIONES WEB\WebSistemaInventario\WebSi
 C:\respaldos Laurita\UNIANDES\TAREAS\APLICACIONES WEB\WebSistemaInventario\WebSistemaInventario\obj\Debug\net10.0\WebSistemaInventario.pdb
 C:\respaldos Laurita\UNIANDES\TAREAS\APLICACIONES WEB\WebSistemaInventario\WebSistemaInventario\obj\Debug\net10.0\WebSistemaInventario.genruntimeconfig.cache
 C:\respaldos Laurita\UNIANDES\TAREAS\APLICACIONES WEB\WebSistemaInventario\WebSistemaInventario\obj\Debug\net10.0\ref\WebSistemaInventario.dll
+C:\respaldos Laurita\UNIANDES\TAREAS\APLICACIONES WEB\WebSistemaInventario\WebSistemaInventario\obj\Debug\net10.0\WebSistemaInventario.sourcelink.json
