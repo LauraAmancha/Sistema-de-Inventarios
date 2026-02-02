@@ -1,0 +1,13 @@
+﻿@model SistemasInventarios.Models.OrdenCompra
+<form asp-action="Create" method="post">
+    <label>Producto:</label>
+    <select asp-for="ProductoId" asp-items="ViewBag.Productos"></select>
+
+    <label>Proveedor:</label>
+    <select asp-for="ProveedorId" asp-items="ViewBag.Proveedores"></select>
+
+    <label>Cantidad:</label>
+    <input asp-for="Cantidad" type="number" />
+
+    <button type="submit">Registrar Orden</button>
+</form>

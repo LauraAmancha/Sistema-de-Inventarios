@@ -1,0 +1,33 @@
+﻿@model SistemasInventarios.Models.OrdenCompra
+@{
+    var productos = ViewBag.Productos as List<SistemasInventarios.Models.Producto>;
+    var proveedores = ViewBag.Proveedores as List<SistemasInventarios.Models.Proveedor>;
+}
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label class="form-label">Producto</label>
+        <select asp-for="ProductoId" class="form-select" asp-items="@(new SelectList(productos, "Id", "Nombre"))">
+            <option value="">-- Selecciona un producto --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Proveedor</label>
+        <select asp-for="ProveedorId" class="form-select" asp-items="@(new SelectList(proveedores, "Id", "Nombre"))">
+            <option value="">-- Selecciona un proveedor --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Cantidad" class="form-label">Cantidad</label>
+        <input asp-for="Cantidad" type="number" class="form-control" />
+        <span asp-validation-for="Cantidad" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar Orden</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

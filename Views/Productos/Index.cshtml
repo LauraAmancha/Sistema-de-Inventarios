@@ -1,0 +1,21 @@
+﻿@model IEnumerable<SistemasInventarios.Models.Producto>
+
+<h2>Productos</h2>
+
+<a href="/Productos/Create">Agregar Producto</a>
+
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Nombre</td>
+            <td>@p.Stock</td>
+        </tr>
+    }
+</table>
+
