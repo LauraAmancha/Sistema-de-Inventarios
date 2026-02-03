@@ -1,5 +1,4 @@
-﻿# Archivos de compilación de Visual Studio
-bin/
+﻿bin/
 obj/
 *.user
 *.suo
