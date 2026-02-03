@@ -3,28 +3,13 @@
     ViewData["Title"] = "Sistema de Inventarios";
 }
 
-<h1>Sistema de Inventarios</h1>
+<h1>@ViewData["Title"]</h1>
 
-<ul class="nav nav-tabs" id="menuTabs" role="tablist">
-    <li class="nav-item">
-        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#producto">Agregar Producto</button>
-    </li>
-    <li class="nav-item">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#proveedor">Agregar Proveedor</button>
-    </li>
-    <li class="nav-item">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#orden">Registrar Orden</button>
-    </li>
-</ul>
+<p>Bienvenido al sistema de inventarios.</p>
 
-<div class="tab-content mt-3">
-    <div class="tab-pane fade show active" id="producto">
-        @await Html.PartialAsync("_CreateProducto")
-    </div>
-    <div class="tab-pane fade" id="proveedor">
-        @await Html.PartialAsync("_CreateProveedor")
-    </div>
-    <div class="tab-pane fade" id="orden">
-        @await Html.PartialAsync("_CreateOrden")
-    </div>
-</div>
+<p>
+    <a class="btn btn-primary" asp-controller="Productos" asp-action="Create">Agregar Producto</a>
+    <a class="btn btn-primary" asp-controller="Proveedores" asp-action="Create">Agregar Proveedor</a>
+    <a class="btn btn-primary" asp-controller="Ordenes" asp-action="Create">Registrar Orden</a>
+</p>
+

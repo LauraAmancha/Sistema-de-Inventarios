@@ -1,6 +1,8 @@
 ﻿@model SistemasInventarios.Models.Proveedor
 
 <form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
     <div class="mb-3">
         <label asp-for="Nombre" class="form-label"></label>
         <input asp-for="Nombre" class="form-control" />

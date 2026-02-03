@@ -15,17 +15,22 @@ namespace SistemasInventarios.Controllers
             _context = context;
         }
 
+        // GET: Proveedores
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Proveedores.ToListAsync());
+            var proveedores = await _context.Proveedores.ToListAsync();
+            return View(proveedores);
         }
 
+        // GET: Proveedores/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Proveedores/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Proveedor proveedor)
         {
             if (ModelState.IsValid)

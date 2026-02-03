@@ -1,21 +1,25 @@
 ﻿@model IEnumerable<SistemasInventarios.Models.Producto>
 
-<h2>Productos</h2>
+<h2>Lista de Productos</h2>
 
-<a href="/Productos/Create">Agregar Producto</a>
-
-<table border="1">
-    <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Stock</th>
-    </tr>
-    @foreach (var p in Model)
-    {
+<table class="table">
+    <thead>
         <tr>
-            <td>@p.Nombre</td>
-            <td>@p.Stock</td>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Stock</th>
+            <th>Precio</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Nombre</td>
+                <td>@p.Stock</td>
+                <td>@p.Precio.ToString("C")</td> <!-- Muestra como moneda -->
+            </tr>
+        }
+    </tbody>
 </table>
-
